@@ -22,3 +22,10 @@ new Vue({
         show:true,
     }
 });
+
+new Vue({
+    el: '#floatup',
+    data: {
+      show: false
+    }
+})

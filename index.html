@@ -7,6 +7,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -40,6 +41,19 @@
             </div>
             <div class="col">
                 <button @click="show = !show">Bounce</button>
+            </div>
+        </div>
+        <div id="floatup" class="row">
+            <div class="col">
+                <transition 
+                    name="custom-classes-transition"
+                    enter-active-class="animated bounceInUp">
+                
+                    <p v-if="show">Up!</p>
+                </transition>
+            </div>
+            <div class="col">
+                <button @click="show = !show">Float up</button>
             </div>
         </div>
     </div>

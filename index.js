@@ -15,3 +15,10 @@ new Vue({
         }   
     }
 });
+
+new Vue({
+    el:'#bounce',
+    data: {
+        show:true,
+    }
+});

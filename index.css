@@ -7,26 +7,44 @@ html, body{
 .top{
     height: 10vh;
 }
+
+/* fade */
 .fade-enter-active, .fade-leave-active {
     transition: opacity .5s;
   }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
     opacity: 0;
 }
+
+/* bounce */
 .bounce-enter-active {
-    animation: bounce-in .5s;
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
   }
-  .bounce-leave-active {
-    animation: bounce-in .5s reverse;
+  50% {
+    transform: scale(1.5);
   }
-  @keyframes bounce-in {
-    0% {
-      transform: scale(0);
-    }
-    50% {
-      transform: scale(1.5);
-    }
-    100% {
-      transform: scale(1);
-    }
+  100% {
+    transform: scale(1);
   }
+}
+/* typing text*/
+.typinp{    
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 4s steps(60, end); 
+}
+
+@keyframes type{ 
+    from { width: 0; } 
+}

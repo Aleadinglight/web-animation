@@ -19,6 +19,7 @@
 <body>
     <div class="top">
     </div>
+
     <div class="container"> 
         <div id="fade" class="row">
             <div class="col">
@@ -33,6 +34,7 @@
                 </button>
             </div>
         </div>
+
         <div id="bounce" class="row">
             <div class="col">
                 <transition name="bounce">
@@ -43,6 +45,7 @@
                 <button @click="show = !show">Bounce</button>
             </div>
         </div>
+
         <div id="floatup" class="row">
             <div class="col">
                 <transition 
@@ -54,6 +57,18 @@
             </div>
             <div class="col">
                 <button @click="show = !show">Float up</button>
+            </div>
+        </div>
+
+        <div id="typingText" class="row">
+            <div class="col">
+                <transition 
+                    name="typing">                
+                    <p v-if="show">Hello, I come one by one!</p>
+                </transition>
+            </div>
+            <div class="col">
+                <button @click="show = !show">Show</button>
             </div>
         </div>
     </div>

@@ -26,12 +26,12 @@ new Vue({
 new Vue({
     el: '#floatup',
     data: {
-      show: false
+      show: true
     }
-})
+});
 
 new Vue({
-    el: '#floatup',
+    el: '#typingText',
     data: {
       show: false
     }
